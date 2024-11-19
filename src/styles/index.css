@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #2A9D8F;
+  --secondary: #E9C46A;
+  --accent: #E76F51;
+  --background: #F8F9FA;
+  --text: #264653;
+}
+
+.dark {
+  --primary: #3EB4A5;
+  --secondary: #FFD87D;
+  --accent: #FF8266;
+  --background: #1A1A1A;
+  --text: #E5E7EB;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: var(--text);
+  background-color: var(--background);
+  line-height: 1.5;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  filter: brightness(110%);
+}
+
+.btn-secondary {
+  background-color: var(--secondary);
+  color: var(--text);
+}
+
+.btn-secondary:hover {
+  filter: brightness(95%);
+}
+
+.card {
+  @apply bg-white dark:bg-gray-800;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+}
+
+.input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #E2E8F0;
+  border-radius: 0.5rem;
+  transition: border-color 0.2s;
+  @apply dark:bg-gray-800 dark:border-gray-700 dark:text-white;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.nav-link {
+  color: var(--text);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s;
+}
+
+.nav-link:hover {
+  @apply bg-gray-100 dark:bg-gray-700;
+}
+
+.nav-link.active {
+  color: var(--primary);
+  font-weight: 600;
+}
